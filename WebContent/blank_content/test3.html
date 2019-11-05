@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+<script>
+	window.onload = function() //onload 事件控制代碼，文件裝載結束時呼叫
+
+	{
+		var ul = document.getElementById("tag").getElementsByTagName("li");
+		var index = 0;
+		for (var i = 0; i < ul.length; i++) {
+			if (ul[i].getAttribute("class") == "current") {
+				index = i;
+				break
+			}			
+		}
+		
+		var tag = document.getElementById("tag").children; //獲取Tag下的li，即Tag標籤 
+		var content = document.getElementById("tagContent").children; //獲取Tag標籤對應的內容 
+		content[index].style.display = "block"; //預設顯示第一個標籤的內容 
+		var len = tag.length;
+		for (var i = 0; i < len; i++) //無論點選誰都能實現當前顯示，其餘隱藏
+		{
+			tag[i].index = i; //為何如此？（看下面解釋） 
+			tag[i].onclick = function() //0級DOM的事件控制代碼註冊
+			{ 
+				for (var n = 0; n < len; n++)
+				{
+					tag[n].className = "";
+					content[n].style.display = "none";
+				} //首先將全部的div隱藏
+				tag[this.index].className = "current";
+				content[this.index].style.display = "block";
+			}
+		}
+
+	}
+</script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	width: 500px;
+	margin: 10px auto;
+}
+
+#tag {
+	width: 498px;
+	overflow: hidden;
+	background: #000;
+	border: 1px solid #000;
+}
+
+#tag li {
+	list-style: none;
+	float: left;
+	margin-right: 0px;
+	color: white;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+#tag .current {
+	color: #000;
+	background: #ccc;
+}
+
+#tagContent div {
+	width: 498px;
+	border: 1px solid #000;
+	border-top: none;
+	height: 300px;
+	display: none;
+}
+</style>
+</head>
+<body>
+<table align = center>
+<tr><td>
+	<div class="wrap">
+		<ul id="tag">
+			<li >標籤一</li>
+			<li >標籤二</li>
+			<li class="current" >標籤三</li>
+		</ul>
+		<div id="tagContent">
+			<div>
+				內容一<br><table width = 300 align = center border = 1><tr><td>內容一點一<tr><td>喔齁齁齁</table>
+			</div>
+			<div class="current">
+				內容二<br><table width = 300 align = center border = 1><tr><td>內容二點二<tr><td>喔齁齁齁</table>
+			</div>
+			<div>
+				內容三<br><table width = 300 align = center border = 1><tr><td>內容三點三<tr><td>喔齁齁齁</table>
+			</div>
+		</div>
+	</div>
+	</table>
+</body>
+</html>

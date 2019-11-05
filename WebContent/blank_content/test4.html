@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+
+<script>
+       $(document).ready(function(){
+              var Uarry=$("#tcontent li");//獲取所有的li元素
+              $("#tcontent li").click(function(){//點擊事件
+                   //測試直接獲取值 var v=$(this).text(); alert(v);      
+                   
+                   var count=$(this).index();//獲取li的下標
+                   var Tresult=Uarry.eq(count).text();
+                   $("#tresult").val(Tresult);
+              }) 
+       })
+   </script>
+
+
+</head>
+<body>
+ <div class="con">
+        <span>您所選取的值為：</span><span><input type="text" id="tresult" /></span>
+        <br>
+        <ul id="tcontent">
+            <li>選項1</li>
+            <li>選項2</li>
+            <li>選項3</li>
+            <li>選項4</li>
+            <li>選項5</li>
+        </ul>
+        <br>
+    </div>
+
+</body>
+</html>

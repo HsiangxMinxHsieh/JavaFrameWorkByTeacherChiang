@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !important;}
+
+
+td {
+	align: center;
+	valign: bottom; text-align : center;
+	margin: auto;
+	text-align: center;
+}
+
+.functiontitle {
+	font-weight: bold;
+	color: 		Olive;
+	background-color: MintCream;
+	font-size: 18px;
+	line-height: 30px;
+	padding:5px;
+}
+
+.title {
+	font-weight: bold;
+	background-color: LemonChiffon;
+	color: red;
+	margin: auto;
+	font-size: 24px;
+	text-align: center;
+	padding: 10px;
+}

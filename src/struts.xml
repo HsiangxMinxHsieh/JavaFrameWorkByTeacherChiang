@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache software fundation//dtd strts configuration 2.5//en"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="day34login"
+			class="day3456.Controller.day34LoginAction">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="LoginSuccess">day34ex1_welcom.jsp</result>
+			<result name="LoginFail">day34ex1_error_password.jsp</result>
+			<result name="NeedSignUp">day34ex1_add.jsp</result>
+			<!-- 以下為使用系統內建值 -->
+			<!--<result name="success">day34ex1_welcom.jsp</result> -->
+			<!--<result name="error">day34ex1_error.jsp</result> -->
+		</action>
+
+		<action name="day34add"
+			class="day3456.Controller.day34AddAction">
+			<!-- 注意，為呼叫端在同一資料夾下的路徑！ -->
+			<result name="AddSuccess">day34ex1_login.jsp</result>
+			<result name="JDBCFail">day34ex1_error_jdbc.jsp</result>
+			<result name="HaveRepeat">day34ex1_error_repeat.jsp</result>
+			<result name="EnterNull">day34ex1_error_enternull.jsp</result>
+		</action>
+
+		<action name="day56login"
+			class="day3456.Controller.day56LoginAction">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="LoginSuccess">day56ex1_welcom.jsp</result>
+			<result name="LoginFail">day56ex1_error_password.jsp</result>
+			<result name="NeedSignUp">day56ex1_error_password.jsp</result>
+		</action>
+
+		<action name="day78910add"
+			class="day78910.controller.day78910AddAction">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="AddSuccess">day78910ex1_login.jsp</result>
+			<result name="JDBCFail">day78910ex1_error_jdbc.jsp</result>
+			<result name="HaveRepeat">day78910ex1_error_repeat.jsp</result>
+			<result name="EnterNull">day78910ex1_error_enternull.jsp</result>
+		</action>
+
+		<action name="day78910login"
+			class="day78910.controller.day78910LoginAction">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="LoginSuccess">day78910ex1_welcom.jsp</result>
+			<result name="LoginFail">day78910ex1_error_password.jsp</result>
+			<result name="NeedSignUp">day78910ex1_add.jsp</result>
+		</action>
+	</package>
+</struts>

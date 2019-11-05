@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>JavaFrameWork</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 忘記關鍵字： struts2 web.xml sample 第一個結果。 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 為了讓servlet與struts2可以共存，必須指定呼叫servlet的位置 -->
+	<servlet>
+		<servlet-name>day12Member</servlet-name>
+		<servlet-class>day12.Controller.MemberAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>day12Member</servlet-name>
+		<url-pattern>/day12MemberAction.servlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 為了讓servlet與struts2可以共存，必須指定呼叫servlet的位置 -->
+	<servlet>
+		<servlet-name>day11_16test2</servlet-name>
+		<servlet-class>day11_16.controller.day11_16test2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>day11_16test2</servlet-name>
+		<url-pattern>/day11_16test2.servlet</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
