@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@page import="day78910.model.member"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +14,9 @@
 }
 </style>
 </head>
+<%
+	member m = (member) session.getAttribute("M");
+%>
 <body>
 	<div class="title">購物頁面</div>
 	<table width=600 align=center border=1>
@@ -23,12 +27,12 @@
 					<tr>
 						<td><s:form action="day78910ex5_confirm.jsp">
 								<tr>
-									<td><s:textfield name="ruler" label="尺數量" /> <tr>
-									<td>
-								<s:textfield
-											name="pen" label="筆數量" /> <tr>
-									<td>
-								<s:submit value="完成送出" /><tr>
+									<td><s:textfield name="ruler" label="尺數量" />
+								<tr>
+									<td><s:textfield name="pen" label="筆數量" />
+								<tr>
+									<td><s:submit value="完成送出" />
+								<tr>
 									<td>
 							</s:form>
 				</table>

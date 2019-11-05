@@ -14,15 +14,18 @@
 }
 </style>
 </head>
-<%try{
-	member m = (member) session.getAttribute("M");
-	
-}catch(Exception e){
-	
-}
-int r = Integer.parseInt(request.getParameter("ruler"));
-int pen = Integer.parseInt(request.getParameter("pen"));
+<%
+	member m = new member();
+	try {
+		m = (member) session.getAttribute("M");
+
+	} catch (Exception e) {
+
+	}
+	int r = Integer.parseInt(request.getParameter("ruler"));
+	int pen = Integer.parseInt(request.getParameter("pen"));
 	porder p = new porder();
+	p.setName((m != null && m.getName() != null) ? m.getName() : "沒有購買者");
 	p.setRuler(r);
 	p.setPen(pen);
 	session.setAttribute("P", p);
@@ -37,6 +40,7 @@ int pen = Integer.parseInt(request.getParameter("pen"));
 			<td height=300 valign=top><table align=center>
 					<tr>
 						<td colspan=2>以下是<font color=blue><%=p.getName()%></font>您的訂單，請確認：
+
 
 						
 					<tr>
