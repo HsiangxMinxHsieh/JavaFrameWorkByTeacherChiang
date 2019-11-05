@@ -14,7 +14,7 @@ public class porderDao implements impl{
 	public static void main(String[] args) {
 		// ADD
 //		porder p = new porder();
-//		p.setName("�暺����");
+//		p.setName("吼黑哈");
 //		p.setRuler(5);
 //		p.setPen(11);
 //		p.getSum();
@@ -28,7 +28,7 @@ public class porderDao implements impl{
 //		new porderDao().deleteObject(14);
 		// UPDATE
 //		porder m = new porder();
-//		m.setName("�暺����");
+//		m.setName("吼黑哈ㄏㄧㄏㄧㄡˇ~~~");
 //		m.setRuler(12);
 //		m.setPen(14);
 //		m.getSum();
