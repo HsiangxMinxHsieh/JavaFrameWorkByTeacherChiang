@@ -69,7 +69,7 @@ body {
 
 	<br>
 	<div class="title">此網頁展示小蝦米於產學合作課程中，向江聖榮老師學習到的技術：</div>
-	<div class="title">蝦米上課用專案位置：http://10.10.4.225:8080/JavaFrameWork</div>
+	<div class="title">蝦米上課用專案位置：http://10.10.4.225:8080/JavaFrameWorkByTeacherChiang/</div>
 	<HR>
 	<div class="masonry">
 		<div class="item">
@@ -107,7 +107,13 @@ body {
 					href="day11_16/day11_16ex1_Spring.jsp" target=_blank><H4>Spring簡介</H4></a> <a
 					href="day11_16/day11_16ex1_Spring_example_class.jsp" target=_blank><H4>Spring使用範例(類別)</H4></a> <a
 					href="day11_16/day11_16ex2_Spring_example_index.jsp" target=_blank><H4>Spring使用範例(網頁)</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
+					href="day34/day34ex4.jsp" target=_blank><H4>Spring依賴注入(List)用法示範</H4></a> <a
+					href="day34/day34ex5.jsp" target=_blank><H4>Dynamic Web Project 轉<BR> Maven Project步驟及注意事項</H4></a><a
+					href="day34/day34ex5.jsp" target=_blank><H4>新建Maven Project步驟及注意事項</H4></a><a
+					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a><a
+					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a><a
+					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a><a
+					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a><a
 					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
 			</div>
 		</div>
