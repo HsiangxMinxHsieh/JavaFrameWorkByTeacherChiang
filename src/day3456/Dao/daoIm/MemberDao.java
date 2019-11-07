@@ -16,10 +16,10 @@ public class MemberDao implements DaoIm {
 //		new MemberDao().add(new member("吼黑哈", "ggg", "1234"));
 //		new MemberDao().update(1, new member("yyy", "000", "1234"));
 //		new MemberDao().delete(2);
-		System.out.println(new MemberDao().checkBeforeAdd(new member("吼黑哈", "eee", "1234")));
-//		String searchUser = "000";
-//		System.out.println("測試取得"+searchUser+"的所有資料為：" + new MemberDao().queryByUser(searchUser));
-//		System.out.println("測試找是否有" + searchUser + "的結果為：" + new MemberDao().checkUser(searchUser));
+//		System.out.println(new MemberDao().checkBeforeAdd(new member("吼黑哈", "eee", "1234")));
+		String searchUser = "000";
+		System.out.println("測試取得"+searchUser+"的所有資料為：" + new MemberDao().queryByUser(searchUser));
+		System.out.println("測試找是否有" + searchUser + "的結果為：" + new MemberDao().checkUser(searchUser));
 	}
 
 	/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
