@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019/10/17 ?U?? 08:47:39 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="day78910.model.member" table="MEMBER">
+		<id name="id" type="java.lang.Integer" access="field">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="user" type="java.lang.String">
+			<column name="USER" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+		<property name="Address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="Mobile" type="java.lang.String">
+			<column name="MOBILE" />
+		</property>
+		<property name="Phone" type="java.lang.String">
+			<column name="PHONE" />
+		</property>
+	</class>
+</hibernate-mapping>
