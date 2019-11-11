@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>尺筆會員新增</title>
+<title>會員新增</title>
 <link rel=stylesheet type="text/css" href="../../css/class.css">
 <link rel=stylesheet type="text/css" href="./css/class.css">
 <style type="text/css">
@@ -13,31 +13,58 @@
 }
 </style>
 </head>
+<script>
+	function check() {
+		var txtName = document.getElementById("txtname");
+		var txtUser = document.getElementById("txtuser");
+		var txtPassword = document.getElementById("txtpassword");
+		if (txtName.value.length == 0) {
+			alert("請輸入姓名。");
+			return false;
+		} 
+		if (txtUser.value.length == 0) {
+			alert("請輸入帳號。");
+			return false;
+		} 
+		if (txtPassword.value.length == 0) {
+			alert("請輸入密碼。");
+			return false;
+		} 
+		return true;
+	}
+</script>
 <body>
-	<div class="title">尺筆會員新增</div>
+
 	<table width=600 align=center border=1>
 		<tr>
 			<td height=150 align=center><jsp:include page="../title.jsp" />
 		<tr>
 			<td height=300　 valign=top>
-				<form action="day78910add" method="post">
+				<form action="day11_16Add" method="post">
 					<table align=center>
 						<tr>
 							<td colspan=2>
 						<tr>
-							<td>名字：<input type="text" name="name"> <BR>
+							<td>姓名：<input id="txtname" type="text" name="name" required="required"> <BR>
 						<tr>
-							<td>帳號：<input type="text" name="user"> <BR>
+							<td>帳號：<input id="txtuser" type="text" name="user" > <BR>
 						<tr>
-							<td>密碼：<input type="password" name="password"> <BR>
+							<td>密碼：<input id="txtpassword" type="password" name="password"> <BR>
 						<tr>
-							<td colspan=2>
-								<button>確定送出</button>
+							<td>地址：<input type="text" name="Address"> <BR>
+						<tr>
+							<td>手機：<input type="text" name="Mobile"> <BR>
+						<tr>
+							<td>電話：<input type="text" name="Phone"> <BR>
+						<tr>
+							<td colspan=2><input type="SUBMIT" value="確定送出"
+								onclick="return check()" />
 					</table>
 				</form>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />
 	</table>
+
 	<HR>
 	<span class="functiontitle">day34AddAction程式碼：</span>
 	<BR> package day34.Controller;

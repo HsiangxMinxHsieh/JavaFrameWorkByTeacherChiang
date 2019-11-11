@@ -13,14 +13,14 @@
 }
 </style>
 </head>
+<%session.setAttribute("M", null); %>
 <body>
-	<div class="title">尺筆訂單會員登入頁面</div>
 	<table width=600 align=center border=1>
 		<tr>
 			<td height=150 align=center><jsp:include page="../title.jsp" />
 		<tr>
 			<td height=300　 valign=top>
-				<form action="day78910login" method="post">
+				<form action="day11_16Login" method="post">
 					<table align=center>
 						<tr>
 							<td colspan=2>登入頁面

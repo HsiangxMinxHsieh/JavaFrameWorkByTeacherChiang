@@ -3,45 +3,46 @@ package day11_16_combine.model;
 public class porder {
 	private Integer id;
 	private String name;
-	private Integer ruler=0;
-	private Integer pen=0;
+	private Integer Pro1;
+	private Integer Pro2;
+	private Integer Pro3;
 	private Integer sum;
-
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Integer getRuler() {
-		return ruler;
-	}
-	public void setRuler(Integer ruler) {
-		this.ruler = ruler;
-	}
-	public Integer getPen() {
-		return pen;
-	}
-	public void setPen(Integer pen) {
-		this.pen = pen;
-	}
+	
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getPro1() {
+		return Pro1;
+	}
+	public void setPro1(Integer pro1) {
+		Pro1 = pro1;
+	}
+	public Integer getPro2() {
+		return Pro2;
+	}
+	public void setPro2(Integer pro2) {
+		Pro2 = pro2;
+	}
+	public Integer getPro3() {
+		return Pro3;
+	}
+	public void setPro3(Integer pro3) {
+		Pro3 = pro3;
+	}
+	public Integer getSum() {
+		this.sum = Pro1*150+Pro2*300+Pro3*500;
+		return sum;
+	}
 	public void setSum(Integer sum) {
 		this.sum = sum;
 	}
-	public Integer getSum() {
-		this.sum = ruler * 39 + pen * 25;
-		return sum;
-	}
-	
-	@Override
-	public String toString() {
-		return "porder [id=" + id + ", name=" + name + ", ruler=" + ruler + ", pen=" + pen + ", sum=" + sum + "]";
-	}
-	
 }

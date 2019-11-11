@@ -1,4 +1,4 @@
-package day78910.dao;
+package day11_16_combine.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 public interface impl {
 	static Session getSe()
 	{
-		Configuration conn=new Configuration().configure("hibernate.cfg.xml");
+		Configuration conn=new Configuration().configure("BigBuyCombineMember.cfg.xml");
 		SessionFactory sf=conn.buildSessionFactory();
 		Session se=sf.openSession();
 		return se;

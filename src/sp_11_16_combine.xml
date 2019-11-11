@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="m1" class="day11_16_combine.model.member">
+		<property name="name" value="未填入姓名" />
+		<property name="user" value="未填入帳號" />
+		<property name="password" value="未填入密碼" />
+		<property name="Address" value="未填入地址" />
+		<property name="Mobile" value="未填入電話" />
+		<property name="Phone" value="未填入手機" />
+	</bean>
+
+	<bean id="p1" class="day11_16_combine.model.porder">
+		<property name="name" value="未填入姓名" />
+		<property name="Pro1" value="0" />
+		<property name="Pro2" value="0" />
+		<property name="Pro3" value="0" />
+		<property name="sum" value="0" />
+	</bean>
+</beans>

@@ -40,6 +40,7 @@ public class day78910AddAction extends ActionSupport {
 		String NAME = getName();
 		String USER = getUser();
 		String PASSWORD = getPassword();
+		
 		member m1 = new member();
 		m1.setName(NAME);
 		m1.setUser(USER);

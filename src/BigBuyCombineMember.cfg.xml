@@ -9,7 +9,7 @@
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gjun?characterEncoding=utf-8</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<mapping resource="day11_16/model/member.hbm.xml" />
-		<mapping resource="day11_16/model/porder.hbm.xml" />
+		<mapping resource="day11_16_combine/model/member.hbm.xml" />
+		<mapping resource="day11_16_combine/model/porder.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import day12.Dao.daoIm.MemberDao;
 import day12.Model.member;
 
-@WebServlet("/day12MemberAction")
 public class MemberAction extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

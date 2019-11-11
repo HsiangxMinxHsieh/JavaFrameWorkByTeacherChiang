@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="day78910.model.porder"%>
-<%@page import="day78910.dao.porder.porderDao"%>
+<%@page import="day11_16_combine.model.porder"%>
+<%@page import="day11_16_combine.dao.porder.porderDao"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,19 +27,26 @@
 		<tr>
 			<td height=300 valign=top><table align=center>
 					<tr>
-						<td colspan=2>以下是<font color=blue><%=p.getName()%></font>您的訂單：
-						
+						<td colspan=2>親愛的<font color="blue"><%=p.getName()%></font>，訂單新增已完成如下：
 					<tr>
-						<td>尺數量：
-						<td><%=p.getRuler()%>
+						<td colspan=2><HR>
 					<tr>
-						<td>比數量：
-						<td><%=p.getPen()%>
+						<td width=50%>品名(金額)
+						<td>數量
 					<tr>
-						<td>共 計：
-						<td><%=p.getSum()%> 元
-						<tr>
-						<td colspan=2><a href="../day78910ex2_index.jsp">回到功能首頁</a>
+						<td>文具類(150元)
+						<td><%=p.getPro1()%>
+					<tr>
+						<td>玩具類(300元)
+						<td><%=p.getPro2()%>
+					<tr>
+						<td>書籍類(500元)
+						<td><%=p.getPro3()%>
+					<tr>
+						<td colspan=2>共計<%=p.getSum()%>元
+					<tr><td colspan=2>
+					<input type="button" value="回到功能首頁" onclick="javascript:location.href='../day11_16ex3_Big_Order_Member_Example_Home.jsp'">
+					
 				</table>
 		<tr>
 			<td height=100><jsp:include page="../end.jsp" />

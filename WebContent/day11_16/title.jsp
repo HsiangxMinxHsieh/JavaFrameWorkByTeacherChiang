@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<div class="title"><h1>自製電子商店</h1></div>
+	<div class="title"><h2>大型電子商務網站製作範例</h2></div>
 
 
 </body>

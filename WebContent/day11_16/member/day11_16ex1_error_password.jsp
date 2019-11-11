@@ -18,14 +18,17 @@
 	<table width=600 align=center border=1>
 		<tr>
 			<td height=150 align=center><jsp:include page="../title.jsp" />
-				<tr>
+		<tr>
 			<td height=300　 valign=top>
-				<h3>登入失敗！請確認帳號密碼是否正確。</h3>
+				<h3>
+					登入失敗！請確認帳號密碼是否正確。<BR>請<a href="day11_16ex1_login.jsp">點我</a>返回登入頁面。<BR>或<a
+						href="day11_16ex1_add.jsp">點我</a>返回註冊頁面。
+				</h3>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />
-	
 	</table>
-	<HR> <span class="functiontitle">程式碼：</span>
+	<HR>
+	<span class="functiontitle">程式碼：</span>
 	<BR>
 	<HR>
 	<span class="functiontitle">表單內容：</span>
@@ -33,5 +36,5 @@
 
 
 
-		</body>
+</body>
 </html>

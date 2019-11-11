@@ -20,7 +20,7 @@
 			<td height=150 align=center><jsp:include page="../title.jsp" />
 				<tr>
 			<td height=300　 valign=top>
-				<h3>新增失敗！資料庫連接錯誤。</h3>
+				<h3>新增失敗！資料庫連接錯誤。<BR>請<a href="day11_16ex1_add.jsp">點我</a>返回註冊頁面。</h3>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />
 	
