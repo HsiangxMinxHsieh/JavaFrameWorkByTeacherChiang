@@ -31,6 +31,4 @@ public class A {
 		return "A [name=" + name + ", chi=" + chi + "]";
 	}
 
-	
-
 }

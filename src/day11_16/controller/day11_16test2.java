@@ -27,15 +27,13 @@ public class day11_16test2 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ApplicationContext a1 = new ClassPathXmlApplicationContext("sp1.xml");
-		Pro1 p1 = (Pro1)a1.getBean("p1");
+		Pro1 p1 = (Pro1)a1.getBean("p1"); // 不使用new，而使用由sp1.xml中定義的p1定義檔
 		String NAME = request.getParameter("name");
 		int CHI = Integer.parseInt(request.getParameter("chi"));
 		p1.getA().setName(NAME);
 		p1.getA().setChi(CHI);
 		HttpSession s = request.getSession();
 		s.setAttribute("A",p1.getA());
-		
 		response.sendRedirect("day11_16/day11_16ex2_Spring_example_OK.jsp");
 	}
-
 }

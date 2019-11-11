@@ -108,11 +108,12 @@ body {
 				<a href="day11_16/day11_16ex1_Spring_example_class.jsp"
 					target=_blank><H4>Spring使用範例(類別)</H4></a> <a
 					href="day11_16/day11_16ex2_Spring_example_index.jsp" target=_blank><H4>Spring使用範例(網頁)</H4></a>
-				<a href="day34/day34ex4.jsp" target=_blank><H4>Spring依賴注入(List)用法示範</H4></a>
-				<a href="day34/day34ex5.jsp" target=_blank><H4>
+				
+				<a href="day11_16/day11_16ex4.jsp" target=_blank><H4>
 						Dynamic Web Project 轉<BR> Maven Project步驟及注意事項
-					</H4></a><a href="day34/day34ex5.jsp" target=_blank><H4>新建Maven
+					</H4></a><a href="day11_16/day11_16ex5.jsp" target=_blank><H4>新建Maven
 						Project步驟及注意事項</H4></a><a
+					href="day11_16/day11_16ex6.jsp" target=_blank><H4>匯出與匯入自製的JAR檔</H4></a><a
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_DataBase.jsp"
 					target=_blank><H4>大型購物網站資料庫新增語法</H4></a><a
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_Home.jsp"
