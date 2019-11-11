@@ -4,6 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 	<package name="default" extends="struts-default">
+
 		<action name="day34login"
 			class="day3456.Controller.day34LoginAction">
 			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
@@ -14,7 +15,6 @@
 			<!--<result name="success">day34ex1_welcom.jsp</result> -->
 			<!--<result name="error">day34ex1_error.jsp</result> -->
 		</action>
-
 		<action name="day34add"
 			class="day3456.Controller.day34AddAction">
 			<!-- 注意，為呼叫端在同一資料夾下的路徑！ -->
