@@ -19,7 +19,10 @@ public class AopService implements AopImpl {
 		System.out.println("沒有Aop的函數執行");
 
 	}
+	public void withAop2() throws Exception {
+		System.out.println("有aop的第二個函數執行 name:" + name);
 
+	}
 	public String getName() {
 		return name;
 	}

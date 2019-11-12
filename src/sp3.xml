@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="aopBefore2"
+		class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="advice">
+			<bean class="day11_16_aop.controller.AopBefore" />
+		</property>
+		<property name="mappedName" value="withAop2" />
+	</bean>
+
+	<bean id="aopAfter2"
+		class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="advice">
+			<bean class="day11_16_aop.controller.AopAfter"></bean>
+		</property>
+		<property name="mappedName" value="withAop2"/>
+	</bean>
+	
+	<bean id="aopBefore"
+		class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<!-- advice為 org.springframework.aop.support.NameMatchMethodPointcutAdvisor 類別內值，不可更改。-->
+		<property name="advice">
+			<bean class="day11_16_aop.controller.AopBefore" />
+		</property>
+		<!-- mappedName為 org.springframework.aop.support.NameMatchMethodPointcutAdvisor 類別內值，不可更改。-->
+		<property name="mappedName" value="withAop"></property>
+	</bean>
+
+	
+	<bean id="aopAfter"
+		class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<!-- advice為 org.springframework.aop.support.NameMatchMethodPointcutAdvisor 類別內值，不可更改。-->
+		<property name="advice">
+			<bean class="day11_16_aop.controller.AopAfter" />
+		</property>
+		<!-- mappedName為 org.springframework.aop.support.NameMatchMethodPointcutAdvisor 類別內值，不可更改。-->
+		<property name="mappedName" value="withAop"></property>
+	</bean>
+	
+    <bean id="aopService" class="org.springframework.aop.framework.ProxyFactoryBean">
+    <!-- interceptorNames為org.springframework.aop.framework.ProxyFactoryBean 類別內值，不可更改。-->
+   		<property name="interceptorNames">
+   			<list>   					
+   			<!-- 注意：這兩個值不會因為順序而在呼叫時做改變，因為其當初實作的方法不同。 -->
+   					<value>aopBefore</value>
+   					<value>aopAfter</value>
+   					<value>aopAfter2</value> 
+   					<value>aopBefore2</value>    							
+   			</list>
+   		</property>
+   		 <!-- target為org.springframework.aop.framework.ProxyFactoryBean 類別內值，不可更改。-->
+   		<property name="target">
+   			<bean class="day11_16_aop.controller.AopService">
+   			<!-- 指定類別並利用set方法給定初始值給初始值 -->
+   				<property name="name" value="Hello,TimmyMike"></property>   			
+   			</bean>   		
+   		</property>   
+   
+   </bean>
+
+
+</beans>
