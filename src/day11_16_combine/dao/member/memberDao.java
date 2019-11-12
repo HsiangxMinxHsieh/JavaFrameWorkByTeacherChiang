@@ -60,11 +60,11 @@ public class memberDao implements impl {
 	/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
 	public int checkBeforeAdd(Object o) {
 		member p = (member) o;
-		if (p.getUser().equals(""))
-			return -2;
-		if (this.checkUser(p.getUser()))
-			return -1;
 		try {
+			if (p.getUser().equals(""))
+				return -2;
+			if (this.checkUser(p.getUser()))
+				return -1;
 			add(o);
 			return 1;
 		} catch (Exception e) {

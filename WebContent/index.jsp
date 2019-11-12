@@ -117,8 +117,8 @@ body {
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_DataBase.jsp"
 					target=_blank><H4>大型購物網站資料庫新增語法</H4></a><a
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_Home.jsp"
-					target=_blank><H4>大型購物網站範例進入點</H4></a><a href="day34/day34ex5.jsp"
-					target=_blank><H4>連結標題待修正</H4></a><a href="day34/day34ex5.jsp"
+					target=_blank><H4>大型購物網站範例進入點</H4></a><a href="day11_16/day11_16ex7.jsp"
+					target=_blank><H4>Spring-AOP</H4></a><a href="day34/day34ex5.jsp"
 					target=_blank><H4>連結標題待修正</H4></a><a href="day34/day34ex5.jsp"
 					target=_blank><H4>連結標題待修正</H4></a>
 			</div>

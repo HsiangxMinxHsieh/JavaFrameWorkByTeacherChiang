@@ -72,11 +72,15 @@ public class day11_16_combine_add_action extends ActionSupport {
 		m1.setName(getName());
 		m1.setUser(getUser());
 		m1.setPassword(getPassword());
-		m1.setAddress(getAddress());
-		m1.setMobile(getMobile());
-		m1.setPhone(getPhone());
+		//如果不為空值，才要指定值。
+		if (!getAddress().equals(""))
+			m1.setAddress(getAddress());
+		if (!getMobile().equals(""))
+			m1.setMobile(getMobile());
+		if (!getPhone().equals(""))
+			m1.setPhone(getPhone());
 		int result = new memberDao().checkBeforeAdd(m1);
-		
+
 //		System.out.println("收到的NAME是===>"+NAME);
 		// 依照結果導入不同頁面：
 		/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
