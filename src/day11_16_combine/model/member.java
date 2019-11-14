@@ -50,5 +50,13 @@ public class member {
 	public void setPhone(String phone) {
 		Phone = phone;
 	}
+	
+	@Override
+	public String toString() {
+		return "member [id=" + id + ", name=" + name + ", user=" + user + ", password=" + password + ", Address="
+				+ Address + ", Mobile=" + Mobile + ", Phone=" + Phone + "]";
+	}
 
+	
+	
 }

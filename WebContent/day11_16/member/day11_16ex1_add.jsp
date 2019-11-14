@@ -43,7 +43,7 @@
 				<form action="day11_16Add" method="post">
 					<table align=center>
 						<tr>
-							<td colspan=2>
+							<td colspan=2> 會員新增
 						<tr>
 							<td>姓名：<input id="txtname" type="text" name="name" required="required"> <BR>
 						<tr>

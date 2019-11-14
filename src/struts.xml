@@ -56,13 +56,23 @@
 			<result name="HaveRepeat">day11_16ex1_error_repeat.jsp</result>
 			<result name="EnterNull">day11_16ex1_error_enternull.jsp</result>
 		</action>
-		
+
 		<action name="day11_16Login"
 			class="day11_16_combine.controller.day11_16_combine_login_action">
 			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
 			<result name="LoginSuccess">day11_16ex1_welcom.jsp</result>
 			<result name="LoginFail">day11_16ex1_error_password.jsp</result>
 			<result name="NeedSignUp">day11_16ex1_add.jsp</result>
+		</action>
+
+
+		<action name="day11_16Edit"
+			class="day11_16_combine.controller.day11_16_combine_edit_action">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="EditSuccess">day11_16ex1_welcom.jsp</result>
+			<result name="JDBCFail">day11_16ex1_error_jdbc.jsp</result>
+			<result name="HaveRepeat">day11_16ex1_error_repeat.jsp</result>
+			<result name="EnterNull">day11_16ex1_error_enternull.jsp</result>
 		</action>
 	</package>
 </struts>

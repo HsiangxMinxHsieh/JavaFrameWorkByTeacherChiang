@@ -37,7 +37,30 @@ public class memberDao implements impl {
 //		new memberDao().updateObject(20,m);
 
 	}
-
+	/**
+	 * 編輯時使用的多型，如果id不同，且user相同才要回傳true。
+	 * */
+	public Boolean checkUser(String user, Integer id) {
+		try {
+			ArrayList<member> arr = new ArrayList<member>();
+			arr.addAll(queryAll());
+			boolean isHaveSameData = false;
+			if (arr.size() != 0) {
+				for (member m : arr) {
+					if (user.equals(m.getUser())&& id!= m.getId())
+						isHaveSameData = true;
+				}
+			}
+			return isHaveSameData;
+		} catch (Exception e) {
+			System.out.println("finding_error");
+			e.printStackTrace();
+		}
+		return false;
+	}
+	/**
+	 * 新增時使用的方法，只比較舊有資料庫的資料是否相同。
+	 * */
 	public Boolean checkUser(String user) {
 		try {
 			ArrayList<member> arr = new ArrayList<member>();
@@ -59,16 +82,35 @@ public class memberDao implements impl {
 
 	/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
 	public int checkBeforeAdd(Object o) {
-		member p = (member) o;
+		member m = (member) o;
 		try {
-			if (p.getUser().equals(""))
+			if (m.getUser().equals(""))
 				return -2;
-			if (this.checkUser(p.getUser()))
+			if (this.checkUser(m.getUser()))
 				return -1;
 			add(o);
 			return 1;
 		} catch (Exception e) {
 			System.out.println("no connection");
+		}
+		return 0;
+	}
+
+	/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
+	public int checkBeforeEdit(Object o) {
+		member m = (member) o;
+		try {
+			if (m.getUser().equals(""))
+				return -2;
+			if (this.checkUser(m.getUser(), m.getId()))
+				return -1;
+			Integer mid = findIdByUser(m.getUser());
+			System.out.println("編輯時的m.getId是"+mid);
+			updateObject(mid, o);
+			return 1;
+		} catch (Exception e) {
+			System.out.println("checkBeforeEdit Error");
+			e.printStackTrace();
 		}
 		return 0;
 	}
@@ -122,10 +164,32 @@ public class memberDao implements impl {
 		mn.setName((mo.getName() == null) ? mn.getName() : mo.getName());
 		mn.setUser((mo.getUser() == null) ? mn.getUser() : mo.getUser());
 		mn.setPassword((mo.getPassword() == null) ? mn.getPassword() : mo.getPassword());
+		mn.setAddress((mo.getAddress() == null) ? mn.getAddress() : mo.getAddress());
+		mn.setMobile((mo.getMobile() == null) ? mn.getMobile() : mo.getMobile());
+		mn.setPhone((mo.getPhone() == null) ? mn.getPhone() : mo.getPhone());
 		se.update(mn);
 		tx.commit();
 		se.close();
 
+	}
+	public Integer findIdByUser(String user) {
+		
+		try {
+			ArrayList<member> arr = new ArrayList<member>();
+			arr.addAll(queryAll());
+			if (arr.size() != 0) {
+				for (member m : arr) {
+					if (user.equals(m.getUser()))
+						return m.getId();
+				}
+			}
+			
+		} catch (Exception e) {
+			System.out.println("finding_error");
+			e.printStackTrace();
+		}
+		
+		return 0;
 	}
 
 }

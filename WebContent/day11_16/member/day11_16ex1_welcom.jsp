@@ -26,19 +26,29 @@
 			<td height=300　 valign=top>
 				<h3>
 					登入成功！歡迎<font color="blue"><%=m.getName()%></font><BR>
-					您的帳戶資料如下供您確認：<BR> 
+					您的帳戶資料如下供您確認：<BR>
 					<table width=400 align=center border=1>
-					<tr><td width="20%"><font color="red">項目</font><td><font color="red">資料</font></td>
-					<tr><td>帳號<td><%=m.getUser() %>
-					<tr><td>密碼<td><%=m.getPassword() %>
-					<tr><td>住址<td><%=m.getAddress() %>
-					<tr><td>手機<td><%=m.getMobile() %>
-					<tr><td>電話<td><%=m.getPhone() %>
-					
-					
+						<tr>
+							<td width="20%"><font color="red">項目</font>
+							<td><font color="red">資料</font></td>
+						<tr>
+							<td>帳號
+							<td><%=m.getUser()%>
+						<tr>
+							<td>密碼
+							<td><%=m.getPassword()%>
+						<tr>
+							<td>住址
+							<td><%=m.getAddress()%>
+						<tr>
+							<td>手機
+							<td><%=m.getMobile()%>
+						<tr>
+							<td>電話
+							<td><%=m.getPhone()%>
 					</table>
-					<BR> 請<a
-						href="../porder/day11_16ex5_order.jsp">點我</a>跳轉至購物畫面．．．
+					<BR> 請<a href="../porder/day11_16ex5_order.jsp">點我</a>跳轉至購物畫面．．．
+					<BR> 請<a href="./day11_16ex1_edit.jsp">點我</a>跳轉至個人資料修改畫面．．．
 				</h3>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />
