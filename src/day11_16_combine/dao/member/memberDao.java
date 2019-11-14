@@ -105,7 +105,6 @@ public class memberDao implements impl {
 			if (this.checkUser(m.getUser(), m.getId()))
 				return -1;
 			Integer mid = findIdByUser(m.getUser());
-			System.out.println("編輯時的m.getId是"+mid);
 			updateObject(mid, o);
 			return 1;
 		} catch (Exception e) {

@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   	<!--new出來就一直會是它，重新呼叫p1或p2皆不會重新new。 -->
+	<bean id="ax" class="day11_16_IOC.model.A" />
+	
+	<bean id="bx" class="day11_16_IOC.model.B" />
+	<!-- xml的autowire，用於取代ref -->
+	<bean id="p1" class="day11_16_IOC.model.pro" autowire="byType" />
+	<bean id="p2" class="day11_16_IOC.model.pro"
+		autowire="constructor" />
+</beans> 
