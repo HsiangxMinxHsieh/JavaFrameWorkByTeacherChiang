@@ -7,9 +7,10 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import day11_16_combine.dao.impl;
+import day11_16_combine.model.member;
 import day11_16_combine.model.porder;
 
-public class porderDao implements impl{
+public class porderDao implements impl {
 
 	public static void main(String[] args) {
 		// ADD
@@ -34,8 +35,11 @@ public class porderDao implements impl{
 //		m.setPen(14);
 //		m.getSum();
 //		new porderDao().updateObject(15,m);
-		
+
+		System.out.println(new porderDao().queryByUserAndJudgeIsAdmin("222"));
+
 	}
+
 	public List<porder> queryAll() {
 		Session se = impl.getSe();
 		Transaction tx = se.beginTransaction();
@@ -48,14 +52,30 @@ public class porderDao implements impl{
 		se.close();
 		return l;
 	}
-	
-	
-	@Override
-	public void add(Object o) {
-		System.out.println("存入前的ｐｏｒｄｅｒ是＝＝＝＞"+(porder)o);
+
+	public List<porder> queryByUserAndJudgeIsAdmin(String user) {
 		Session se = impl.getSe();
 		Transaction tx = se.beginTransaction();
-		se.save((porder)o);
+		String hql = "";
+		if (user.equals("管理者AAABBBCCC"))
+			hql = "from porder";
+		else
+			hql = "from porder where name = '" + user + "'";
+
+		Query<porder> q = se.createQuery(hql);
+		tx.commit();
+		List<porder> l = q.list();
+//		l.forEach(s -> System.out.println(s));
+		se.close();
+		return l;
+	}
+
+	@Override
+	public void add(Object o) {
+		System.out.println("存入前的ｐｏｒｄｅｒ是＝＝＝＞" + (porder) o);
+		Session se = impl.getSe();
+		Transaction tx = se.beginTransaction();
+		se.save((porder) o);
 		tx.commit();
 		se.close();
 	}
@@ -73,7 +93,6 @@ public class porderDao implements impl{
 		se.delete(p);
 		tx.commit();
 		se.close();
-
 	}
 
 	@Override
@@ -82,7 +101,7 @@ public class porderDao implements impl{
 		Transaction tx = se.beginTransaction();
 		porder pn = (porder) getobject(id);
 		porder po = (porder) o;
-		
+
 		pn.setId(id);
 		pn.setName((po.getName() == null) ? pn.getName() : po.getName());
 		pn.setPro1((po.getPro1() == null) ? pn.getPro1() : po.getPro1());
@@ -94,6 +113,19 @@ public class porderDao implements impl{
 		se.close();
 	}
 
-	
+	/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */
+	public int checkBeforeEdit(Integer id,Object o) {
+		porder p = (porder) o;
+		try {
+			if (p.getName().equals(""))
+				return -2;
+			updateObject(id, p);
+			return 1;
+		} catch (Exception e) {
+			System.out.println("porder CheckBeforeEdit Error");
+			e.printStackTrace();
+		}
+		return 0;
+	}
 
 }

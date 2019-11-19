@@ -45,4 +45,9 @@ public class porder {
 	public void setSum(Integer sum) {
 		this.sum = sum;
 	}
+	@Override
+	public String toString() {
+		return "porder [id=" + id + ", name=" + name + ", Pro1=" + Pro1 + ", Pro2=" + Pro2 + ", Pro3=" + Pro3 + ", sum="
+				+ sum + "]";
+	}
 }

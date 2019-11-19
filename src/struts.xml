@@ -74,5 +74,15 @@
 			<result name="HaveRepeat">day11_16ex1_error_repeat.jsp</result>
 			<result name="EnterNull">day11_16ex1_error_enternull.jsp</result>
 		</action>
+		
+		<action name="day11_16EditPorder"
+			class="day11_16_combine.controller.day11_16_combine_edit_porder_action">
+			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
+			<result name="EditSuccess">day11_16ex1_welcom.jsp</result>
+			<result name="JDBCFail">day11_16ex1_error_jdbc.jsp</result>
+			<result name="HaveRepeat">day11_16ex1_error_repeat.jsp</result>
+			<result name="EnterNull">day11_16ex1_error_enternull.jsp</result>
+		</action>
+		
 	</package>
 </struts>

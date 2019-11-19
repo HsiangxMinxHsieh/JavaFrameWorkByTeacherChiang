@@ -27,6 +27,7 @@
 	AUTO_INCREMENT, `name` VARCHAR(100) NULL, `Pro1` INT NULL, `Pro2` INT
 	NULL, `Pro3` INT NULL, `Sum` INT NULL, PRIMARY KEY (`id`)) ENGINE =
 	InnoDB DEFAULT CHARACTER SET = utf8;
+	<BR>
 
 
 </body>

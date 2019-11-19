@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登入成功頁面</title>
+<title>會員中心頁面</title>
 <link rel=stylesheet type="text/css" href="../../css/class.css">
 <link rel=stylesheet type="text/css" href="./css/class.css">
 <style type="text/css">
@@ -18,7 +18,7 @@
 	member m = (member) session.getAttribute("M");
 %>
 <body>
-	<div class="title">登入成功頁面</div>
+	<div class="title">會員中心頁面</div>
 	<table width=600 align=center border=1>
 		<tr>
 			<td height=150 align=center><jsp:include page="../title.jsp" />
@@ -49,6 +49,8 @@
 					</table>
 					<BR> 請<a href="../porder/day11_16ex5_order.jsp">點我</a>跳轉至購物畫面．．．
 					<BR> 請<a href="./day11_16ex1_edit.jsp">點我</a>跳轉至個人資料修改畫面．．．
+					<BR> 請<a href="./day11_16ex1_query_order.jsp">點我</a>跳轉至查詢訂單畫面．．．
+					<BR> 請<a href="./day11_16ex1_logout.jsp">點我</a>登出．．．
 				</h3>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />
