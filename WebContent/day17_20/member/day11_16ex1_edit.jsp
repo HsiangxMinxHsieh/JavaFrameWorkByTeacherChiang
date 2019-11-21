@@ -1,14 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="day11_16_combine.model.member"%>
-<%@page import="day11_16_combine.dao.porder.porderDao"%>
-<%@page import="day11_16_combine.model.porder"%>
-<%@page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>會員訂單查詢</title>
+<title>會員編輯</title>
 <link rel=stylesheet type="text/css" href="../../css/class.css">
 <link rel=stylesheet type="text/css" href="./css/class.css">
 <style type="text/css">
@@ -56,30 +53,28 @@
 			<td height=150 align=center><jsp:include page="../title.jsp" />
 		<tr>
 			<td height=300　 valign=top>
-				<form action="day11_16EditPorder" method="post">
+				<form action="day11_16Edit" method="post">
 					<table align=center>
 						<tr>
-							<td colspan=2>會員訂單查詢 <%
-								List<porder> dataList = new porderDao().queryByUserAndJudgeIsAdmin(m.getName());
-								out.println("<table width=510 align=center border=1>");
-								out.println(
-										"<tr bgcolor=\"LightSkyBlue\"><td width=30 >ID<td width=100 >名稱<td width=60 >文具類<td width=60 >玩具類<td width=60 >書籍類<td width=100 >總計<td width=50>編輯<td width=50>刪除");
-
-								//迴圈印出資料庫內資料 
-								for(porder data : dataList) {
-									out.println("<tr>");
-									out.println("<td>" + data.getId());
-									out.println("<td>" + data.getName());
-									out.println("<td>" + data.getPro1());
-									out.println("<td>" + data.getPro2());
-									out.println("<td>" + data.getPro3());
-									out.println("<td>" + data.getSum());
-									out.println("<td><input type= \"button\" value = \"編輯\" onclick=\"return edit()\"/>");
-									out.println("<td><input type= \"button\" value = \"刪除\" onclick=\"return delete()\"/>");
-								}
-
-								out.println("</table>");
-							%>
+							<td colspan=2>會員編輯
+						<tr>
+							<td>姓名：<input id="txtname" type="text" name="name"
+								required="required" value="<%=m.getName()%>"> <BR>
+						<tr>
+							<td>帳號：<input id="txtuser" type="text" name="user"
+								value="<%=m.getUser()%>" disabled="disabled"> <BR>
+						<tr>
+							<td>密碼：<input id="txtpassword" type="password"
+								name="password" value="<%=m.getPassword()%>"> <BR>
+						<tr>
+							<td>地址：<input type="text" name="Address"
+								value="<%=m.getAddress()%>"> <BR>
+						<tr>
+							<td>手機：<input type="text" name="Mobile"
+								value="<%=m.getMobile()%>"> <BR>
+						<tr>
+							<td>電話：<input type="text" name="Phone"
+								value="<%=m.getPhone()%>"> <BR>
 						<tr>
 							<td colspan=2><input type="SUBMIT" value="編輯完成"
 								onclick="return check()" />

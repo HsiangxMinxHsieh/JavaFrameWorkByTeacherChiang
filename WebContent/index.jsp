@@ -125,9 +125,9 @@ body {
 		</div>
 		<div class="item">
 			<div class="item__content">
-				<span class="functiontitle">第十一十二堂課：</span> <a
-					href="day34/day34ex1.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex2.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
+				<span class="functiontitle">第十七～二十堂課(Css&JavaScript)：</span> <a
+					href="day17_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(CSS美化)</H4></a> <a
+					href="day17_20/day17_20ex2.jsp" target=_blank><H4>JavaScript簡單範例</H4></a> <a
 					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
 					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
 					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
