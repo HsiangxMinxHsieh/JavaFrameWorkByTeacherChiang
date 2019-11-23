@@ -4,7 +4,7 @@
 "http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 	<package name="default" extends="struts-default">
-		<action name="day34login"
+			<action name="day34login"
 			class="day3456.Controller.day34LoginAction">
 			<!-- 注意，起始處為呼叫端在同一資料夾下的路徑！ -->
 			<result name="LoginSuccess">day34ex1_welcom.jsp</result>
@@ -83,6 +83,5 @@
 			<result name="HaveRepeat">day11_16ex1_error_repeat.jsp</result>
 			<result name="EnterNull">day11_16ex1_error_enternull.jsp</result>
 		</action>
-		
 	</package>
 </struts>

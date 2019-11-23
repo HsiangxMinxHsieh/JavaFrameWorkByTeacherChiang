@@ -15,9 +15,16 @@
 </style>
 </head>
 <%
-	porder p = (porder) session.getAttribute("P");
-
-	new porderDao().add(p);
+	porder p = new porder();
+	try {
+		p = (porder) session.getAttribute("P");
+		if (p == null)
+			request.getRequestDispatcher("./day11_16ex5_order.jsp").forward(request, response);
+		new porderDao().add(p);
+		session.setAttribute("P", null);
+	} catch (Exception e) {
+		request.getRequestDispatcher("./day11_16ex5_order.jsp").forward(request, response);
+	}
 %>
 <body>
 	<div class="title">訂單新增完成</div>
@@ -28,6 +35,9 @@
 			<td height=300 valign=top><table align=center>
 					<tr>
 						<td colspan=2>親愛的<font color="blue"><%=p.getName()%></font>，訂單新增已完成如下：
+
+
+						
 					<tr>
 						<td colspan=2><HR>
 					<tr>
@@ -44,9 +54,11 @@
 						<td><%=p.getPro3()%>
 					<tr>
 						<td colspan=2>共計<%=p.getSum()%>元
-					<tr><td colspan=2>
-					<input type="button" value="回到功能首頁" onclick="javascript:location.href='../day11_16ex3_Big_Order_Member_Example_Home.jsp'">
-					
+					<tr>
+						<td colspan=2><input type="button" value="回到導覽頁"
+							onclick="javascript:location.href='../day11_16ex3_Big_Order_Member_Example_Home.jsp'">
+							<input type="button" value="回到會員中心"
+							onclick="javascript:location.href='../member/day11_16ex1_welcom.jsp'">
 				</table>
 		<tr>
 			<td height=100><jsp:include page="../end.jsp" />

@@ -11,8 +11,8 @@
 		<property name="user" value="未填入帳號" />
 		<property name="password" value="未填入密碼" />
 		<property name="Address" value="未填入地址" />
-		<property name="Mobile" value="未填入電話" />
-		<property name="Phone" value="未填入手機" />
+		<property name="Mobile" value="未填入手機" />
+		<property name="Phone" value="未填入電話" />
 	</bean>
 
 	<bean id="p1" class="day11_16_combine.model.porder">

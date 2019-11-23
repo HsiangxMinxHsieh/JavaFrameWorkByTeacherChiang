@@ -68,13 +68,13 @@
 								name="password" value="<%=m.getPassword()%>"> <BR>
 						<tr>
 							<td>地址：<input type="text" name="Address"
-								value="<%=m.getAddress()%>"> <BR>
+								value=<%=(m.getAddress()!= null && !m.getAddress().equals("null") && !m.getAddress().equals(""))?m.getAddress():"未填入地址" %>> <BR>
 						<tr>
 							<td>手機：<input type="text" name="Mobile"
-								value="<%=m.getMobile()%>"> <BR>
+								value=<%=(m.getMobile()!= null && !m.getMobile().equals("null") && !m.getMobile().equals(""))?m.getMobile():"未填入手機" %>> <BR>
 						<tr>
 							<td>電話：<input type="text" name="Phone"
-								value="<%=m.getPhone()%>"> <BR>
+								value=<%=(m.getPhone()!= null && ! m.getPhone().equals("null") && !m.getPhone().equals(""))?m.getPhone():"未填入電話" %>> <BR>
 						<tr>
 							<td colspan=2><input type="SUBMIT" value="編輯完成"
 								onclick="return check()" />

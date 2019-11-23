@@ -21,7 +21,7 @@
 		<tr>
 			<td height=300　 valign=top>
 				<h3>
-					新增失敗！資料庫內已有該帳號。<BR>請<a href="day11_16ex1_add.jsp">點我</a>返回註冊頁面。
+					操作失敗！資料庫內已有該帳號。<BR>請<a href="day11_16ex1_login.jsp">點我</a>返回登入頁面。<BR>或請<a href="day11_16ex1_add.jsp">點我</a>返回註冊頁面。
 				</h3>
 		<tr>
 			<td height=100 align=right><jsp:include page="../end.jsp" />

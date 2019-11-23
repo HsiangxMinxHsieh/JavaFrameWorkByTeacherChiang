@@ -14,6 +14,21 @@
 </style>
 </head>
 <%session.setAttribute("M", null); %>
+<script>
+	function check() {
+		var txtUser = document.getElementById("txtuser");
+		var txtPassword = document.getElementById("txtpassword");		
+		if (txtUser.value.length == 0) {
+			alert("請輸入帳號。");
+			return false;
+		} 
+		if (txtPassword.value.length == 0) {
+			alert("請輸入密碼。");
+			return false;
+		} 
+		return true;
+	}
+</script>
 <body>
 	<table width=600 align=center border=1>
 		<tr>
@@ -25,12 +40,12 @@
 						<tr>
 							<td colspan=2>登入頁面
 						<tr>
-							<td>帳號：<input type="text" name="user"> <BR>
+							<td>帳號：<input type="text" id="txtuser" name="user"> <BR>
 						<tr>
-							<td>密碼：<input type="password" name="password"> <BR>
+							<td>密碼：<input type="password"  id="txtpassword"  name="password"> <BR>
 						<tr>
 							<td colspan=2>
-								<button>確定送出</button>
+								<button onclick="return check()" >確定送出</button>
 					</table>
 				</form>
 		<tr>

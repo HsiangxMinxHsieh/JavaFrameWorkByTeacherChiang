@@ -27,7 +27,6 @@
 %>
 <script LANGUAGE="javascript">
 	function check() {
-
 		if (document.menu.product1.value == 0
 				&& document.menu.product2.value == 0
 				&& document.menu.product3.value == 0) {

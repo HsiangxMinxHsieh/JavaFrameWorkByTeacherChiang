@@ -28,7 +28,8 @@
 	NULL, `Pro3` INT NULL, `Sum` INT NULL, PRIMARY KEY (`id`)) ENGINE =
 	InnoDB DEFAULT CHARACTER SET = utf8;
 	<BR>
-
-
+	<BR>/*以下為管理者帳號輸入。*/
+	<BR> INSERT INTO gjun.member (name, user,password) VALUES
+	('管理者AAABBBCCC','Admin','admin');
 </body>
 </html>

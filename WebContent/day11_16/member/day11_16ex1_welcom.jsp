@@ -16,6 +16,12 @@
 </head>
 <%
 	member m = (member) session.getAttribute("M");
+	try {
+		m.getName();
+	} catch (NullPointerException e) {
+		//response.sendRedirect("../member/day11_16ex1_login.jsp");
+		request.getRequestDispatcher("../porder/day11_16ex1_needlogin.jsp").forward(request, response);
+	}
 %>
 <body>
 	<div class="title">會員中心頁面</div>
@@ -39,17 +45,17 @@
 							<td><%=m.getPassword()%>
 						<tr>
 							<td>住址
-							<td><%=m.getAddress()%>
+							<td><%=(m.getAddress()!= null && !m.getAddress().equals("null") && !m.getAddress().equals(""))?m.getAddress():"未填入地址" %>
 						<tr>
 							<td>手機
-							<td><%=m.getMobile()%>
+							<td><%=(m.getMobile()!= null && !m.getMobile().equals("null") && !m.getMobile().equals(""))?m.getMobile():"未填入手機" %>
 						<tr>
 							<td>電話
-							<td><%=m.getPhone()%>
+							<td><%=(m.getPhone()!= null && ! m.getPhone().equals("null") && !m.getPhone().equals(""))?m.getPhone():"未填入電話" %>
 					</table>
 					<BR> 請<a href="../porder/day11_16ex5_order.jsp">點我</a>跳轉至購物畫面．．．
-					<BR> 請<a href="./day11_16ex1_edit.jsp">點我</a>跳轉至個人資料修改畫面．．．
-					<BR> 請<a href="../porder/day11_16ex1_query_order.jsp">點我</a>跳轉至查詢與修改訂單畫面．．．
+					<BR> 請<a href="./day11_16ex1_edit.jsp">點我</a>跳轉至個人資料修改畫面．．． <BR>
+					請<a href="../porder/day11_16ex1_query_order.jsp">點我</a>跳轉至查詢與修改訂單畫面．．．
 					<BR> 請<a href="./day11_16ex1_logout.jsp">點我</a>登出．．．
 				</h3>
 		<tr>

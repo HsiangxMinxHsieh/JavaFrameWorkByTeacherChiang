@@ -47,8 +47,9 @@ public class memberDao implements impl {
 			boolean isHaveSameData = false;
 			if (arr.size() != 0) {
 				for (member m : arr) {
-					if (user.equals(m.getUser())&& id!= m.getId())
+					if (user.equals(m.getUser())&& ! id.equals( m.getId())) {
 						isHaveSameData = true;
+					}
 				}
 			}
 			return isHaveSameData;
