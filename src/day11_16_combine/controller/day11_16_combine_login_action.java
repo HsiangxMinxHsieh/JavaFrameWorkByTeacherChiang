@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import day11_16_combine.model.member;
+import day11_16_combine.dao.Fact;
 import day11_16_combine.dao.member.memberDao;
 
 public class day11_16_combine_login_action extends ActionSupport {
@@ -37,8 +40,9 @@ public class day11_16_combine_login_action extends ActionSupport {
 
 	public String execute() throws Exception {
 		// 蝦米寫法：比對資料庫中已儲存的資料
-		memberDao dao = new memberDao();
-		List<member> list = dao.queryAll();
+		ClassPathXmlApplicationContext a2 = new ClassPathXmlApplicationContext("sp_11_16_combine.xml");
+		Fact f1 = (Fact)a2.getBean("f1");
+		List<member> list = f1.getM().queryAll();
 		for (member m : list) {
 			if (m.getUser() == null || m.getPassword() == null)
 				continue;
@@ -49,11 +53,14 @@ public class day11_16_combine_login_action extends ActionSupport {
 			}
 		}
 		// 登入失敗：(判斷是否此帳號，而將使用者導至錯誤頁面或新增頁面
-		if (dao.checkUser(getUser()))
+		if (f1.getM().checkUser(getUser()))
 //				return ERROR;//系統內建值
 			return "LoginFail";
-		else
+		else {
+			ActionContext.getContext().getSession().put("fail", "NeedSignUp"); // 放入Session的關鍵程式碼！
 			return "NeedSignUp";
+		}
+			
 
 	}
 

@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="day11_16_combine.model.member"%>
+<%@page import="day11_16_combine.model.porder"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>會員中心頁面</title>
+<title>訂單確認頁面</title>
 <link rel=stylesheet type="text/css" href="../css/st1.css">
 <style type="text/css">
 .title {
@@ -13,16 +14,19 @@
 }
 </style>
 </head>
-<%	
-	session.setAttribute("fail",null);
+<%
 	member m = (member) session.getAttribute("M");
-	try {
-		m.getName();
-	} catch (NullPointerException e) {
-		//response.sendRedirect("../member/day11_16ex1_login.jsp");
-		request.getRequestDispatcher("../porder/day11_16ex1_needlogin.jsp").forward(request, response);
-	}
+	int pro1 = Integer.parseInt(request.getParameter("product1"));
+	int pro2 = Integer.parseInt(request.getParameter("product2"));
+	int pro3 = Integer.parseInt(request.getParameter("product3"));
+	porder p = new porder();
+	p.setName((m != null && m.getName() != null) ? m.getName() : "沒有購買者");
+	p.setPro1(pro1);
+	p.setPro2(pro2);
+	p.setPro3(pro3);
+	session.setAttribute("P", p);
 %>
+
 <body>
 	<div class="header">
 		<table width="70%" align="center" border=0>
@@ -52,36 +56,36 @@
 	</div>
 	<div class="main">
 		<div style="margin: auto; vertical-align: middle">
-			歡迎<font color="blue"><%=m.getName()%></font><BR>
-			您的帳戶資料如下供您確認：<BR>
-			<table width=400 align=center border=1>
+			<!-- main TOP -->
+			<table align=center>
 				<tr>
-					<td width="20%"><font color="red">項目</font>
-					<td><font color="red">資料</font></td>
+					<td colspan=2>親愛的<font color="blue"><%=m.getName()%></font>，這是你的訂單資料，請確認。
 				<tr>
-					<td>帳號
-					<td><%=m.getUser()%>
+					<td colspan=2><HR>
 				<tr>
-					<td>密碼
-					<td><%=m.getPassword()%>
+					<td width=50%>品名(金額)
+					<td>數量
 				<tr>
-					<td>住址
-					<td><%=(m.getAddress() != null && !m.getAddress().equals("null") && !m.getAddress().equals(""))
-					? m.getAddress()
-					: "未填入地址"%>
+					<td>文具類(150元)
+					<td><%=p.getPro1()%>
 				<tr>
-					<td>手機
-					<td><%=(m.getMobile() != null && !m.getMobile().equals("null") && !m.getMobile().equals(""))
-					? m.getMobile()
-					: "未填入手機"%>
+					<td>玩具類(300元)
+					<td><%=p.getPro2()%>
 				<tr>
-					<td>電話
-					<td><%=(m.getPhone() != null && !m.getPhone().equals("null") && !m.getPhone().equals("")) ? m.getPhone()
-					: "未填入電話"%>
+					<td>書籍類(500元)
+					<td><%=p.getPro3()%>
+				<tr>
+					<td colspan=2><HR>
+				<tr>
+					<td colspan=2>共計<%=p.getSum()%>元
+				<tr>
+					<td colspan=2><input type="button" value="重新選購"
+						onclick="javascript:location.href='day11_16ex5_order.jsp'">
+						<input type="button" value="完成確認"
+						onclick="javascript:location.href='day11_16ex5_finish.jsp'">
 			</table>
-			<BR>
+			<!-- main END -->
 		</div>
-
 	</div>
 	<div class="footer">
 		<table width="100%" align="center" border=0>
@@ -90,8 +94,7 @@
 						page="../end.jsp"></jsp:include>
 		</table>
 	</div>
-<!-- END -->
-
+	<!-- END -->
 
 </body>
 </html>

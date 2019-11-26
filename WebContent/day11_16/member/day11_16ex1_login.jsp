@@ -13,20 +13,20 @@
 }
 </style>
 </head>
-<%session.setAttribute("M", null); %>
+<%
+	session.setAttribute("M", null);
+%>
 <script>
 	function check() {
-		var txtUser = document.getElementById("txtuser");
-		var txtPassword = document.getElementById("txtpassword");		
-		if (txtUser.value.length == 0) {
+		if (loginForm.user.value == "") {
 			alert("請輸入帳號。");
-			return false;
-		} 
-		if (txtPassword.value.length == 0) {
+			return;
+		}
+		if (loginForm.password.value == "") {
 			alert("請輸入密碼。");
-			return false;
-		} 
-		return true;
+			return;
+		}
+		loginForm.submit();
 	}
 </script>
 <body>
@@ -35,17 +35,19 @@
 			<td height=150 align=center><jsp:include page="../title.jsp" />
 		<tr>
 			<td height=300　 valign=top>
-				<form action="day11_16Login" method="post">
+				<form name="loginForm" action="day11_16Login" method="post">
 					<table align=center>
 						<tr>
 							<td colspan=2>登入頁面
 						<tr>
-							<td>帳號：<input type="text" id="txtuser" name="user"> <BR>
+							<td>帳號：<input type="text" id="txtuser" name="user">
+								<BR>
 						<tr>
-							<td>密碼：<input type="password"  id="txtpassword"  name="password"> <BR>
+							<td>密碼：<input type="password" id="txtpassword"
+								name="password"> <BR>
 						<tr>
-							<td colspan=2>
-								<button onclick="return check()" >確定送出</button>
+							<td colspan=2><input type="button" value="確定送出"
+								onClick="check()">
 					</table>
 				</form>
 		<tr>

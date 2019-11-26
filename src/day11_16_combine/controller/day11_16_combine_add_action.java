@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import day11_16_combine.dao.Fact;
 import day11_16_combine.dao.member.memberDao;
 import day11_16_combine.model.member;
 
@@ -64,10 +65,11 @@ public class day11_16_combine_add_action extends ActionSupport {
 	public void setPhone(String phone) {
 		Phone = phone;
 	}
-
+	
 	public String execute() throws Exception {
 		ClassPathXmlApplicationContext a2 = new ClassPathXmlApplicationContext("sp_11_16_combine.xml");
 		member m1 = (member) a2.getBean("m1");
+		Fact f1 = (Fact)a2.getBean("f1");
 		a2.close();
 		m1.setName(getName());
 		m1.setUser(getUser());
@@ -79,7 +81,8 @@ public class day11_16_combine_add_action extends ActionSupport {
 			m1.setMobile(getMobile());
 		if (!getPhone().equals(""))
 			m1.setPhone(getPhone());
-		int result = new memberDao().checkBeforeAdd(m1);
+		
+		int result =f1.getM().checkBeforeAdd(m1);
 
 //		System.out.println("收到的NAME是===>"+NAME);
 		// 依照結果導入不同頁面：

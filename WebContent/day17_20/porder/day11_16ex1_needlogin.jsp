@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登入失敗頁面</title>
+<title>進入失敗頁面</title>
 <link rel=stylesheet type="text/css" href="../css/st1.css">
 <style type="text/css">
 .title {
@@ -35,8 +35,8 @@
 				<tr>
 					<td height=300　 valign=top>
 						<h3>
-							註冊失敗！資料庫連接錯誤。<BR>請<a href="./day11_16ex1_login.jsp">點我</a>進入登入頁面。
-							<BR>或 <BR>請<a href="./day11_16ex1_add.jsp">點我</a>進入註冊頁面。
+							操作過程中遺失登入資料，請先登入。<BR>請<a href="../member/day11_16ex1_login.jsp">點我</a>進入登入頁面。
+							<BR>或 <BR>請<a href="../member/day11_16ex1_add.jsp">點我</a>進入註冊頁面。
 						</h3>
 			</table>
 			<!-- main END -->
@@ -50,5 +50,8 @@
 		</table>
 	</div>
 	<!-- END -->
+
+
+
 </body>
 </html>

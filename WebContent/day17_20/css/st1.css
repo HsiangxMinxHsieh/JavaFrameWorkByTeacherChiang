@@ -13,7 +13,7 @@ body {
 	right: 0;
 	bottom: auto;
 	left: 5%;
-	background-color: #E8E5EB;
+	background-color: #EFFAF1;
 }
 
 .sidebar {
@@ -24,11 +24,14 @@ body {
 	right: auto;
 	bottom: 100px;
 	left: 5%;
-	background-color: #DBF7EC;
+	background-color: #FFF5EE;
 }
 
 .main {
-	
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
 	text-align: center;
 	position: fixed;
 	width: 75%;
@@ -37,7 +40,7 @@ body {
 	right: 0;
 	bottom: 100px;
 	left: 20%;
-	background-color: #EDFBF5;
+	background-color: #DBF7EC;
 }
 
 .footer {

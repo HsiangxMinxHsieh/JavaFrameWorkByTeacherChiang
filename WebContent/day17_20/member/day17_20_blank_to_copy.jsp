@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登入失敗頁面</title>
-<link rel=stylesheet type="text/css" href="../css/st1.css">
+<title>CSS實作範例</title>
+<link rel=stylesheet type="text/css" href="../css/st1.css" />
 <style type="text/css">
 .title {
 	width: 500px;
@@ -23,22 +23,26 @@
 	<div class="sidebar">
 		<table width="100%" align="center" border=0>
 			<tr>
-				<td align="center" valign="center"><span
-					style="font-size: 80px;">操<BR>作<BR>失<BR>敗
-				</span>
+				<td align="center" valign="center"><a
+					href="../member/day11_16ex1_welcom.jsp">會員中心</a>
+			<tr>
+				<td align="center" valign="center"><a
+					href="../porder/day11_16ex5_order.jsp">購物頁面</a>
+			<tr>
+				<td align="center" valign="center"><a
+					href="../member/day11_16ex1_edit.jsp">修改資料</a>
+			<tr>
+				<td align="center" valign="center"><a
+					href="../porder/day11_16ex1_query_order.jsp">查修訂單</a>
+			<tr>
+				<td align="center" valign="center"><a
+					href="./day11_16ex1_logout.jsp">我要登出</a>
 		</table>
 	</div>
 	<div class="main">
 		<div style="margin: auto; vertical-align: middle">
 			<!-- main TOP -->
-			<table width=600 align=center border=0>
-				<tr>
-					<td height=300　 valign=top>
-						<h3>
-							註冊失敗！資料庫連接錯誤。<BR>請<a href="./day11_16ex1_login.jsp">點我</a>進入登入頁面。
-							<BR>或 <BR>請<a href="./day11_16ex1_add.jsp">點我</a>進入註冊頁面。
-						</h3>
-			</table>
+
 			<!-- main END -->
 		</div>
 	</div>
@@ -49,6 +53,7 @@
 						page="../end.jsp"></jsp:include>
 		</table>
 	</div>
-	<!-- END -->
+<!-- END -->
+
 </body>
 </html>

@@ -8,10 +8,7 @@
 <link rel=stylesheet type="text/css" href="./css/st1.css" />
 <style type="text/css">
 .main {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
+	
 }
 </style>
 </head>

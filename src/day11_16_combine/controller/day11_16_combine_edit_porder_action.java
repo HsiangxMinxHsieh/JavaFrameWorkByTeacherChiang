@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import day11_16_combine.dao.Fact;
 import day11_16_combine.dao.member.memberDao;
 import day11_16_combine.dao.porder.porderDao;
 import day11_16_combine.model.member;
@@ -70,14 +71,15 @@ public class day11_16_combine_edit_porder_action extends ActionSupport {
 
 	public String execute() throws Exception {
 		ClassPathXmlApplicationContext a2 = new ClassPathXmlApplicationContext("sp_11_16_combine.xml");
-		porderDao dao = new porderDao();
-		porder p = dao.getobject(getId());
+		Fact f1 = (Fact)a2.getBean("f1");
+		porder p = f1.getP().getobject(getId());
 		p.setName(getName());
 		p.setPro1(getPro1());
 		p.setPro2(getPro2());
 		p.setPro3(getPro3());
 		p.setSum(p.getSum());
-		int result = dao.checkBeforeEdit(getId(),p);
+		
+		int result = f1.getP().checkBeforeEdit(getId(),p);
 //		System.out.println("收到的NAME是===>"+NAME);
 		// 依照結果導入不同頁面：
 		/** 成功回傳1，失敗回傳0，已有重複回傳-1，輸入空值回傳-2 */

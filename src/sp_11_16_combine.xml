@@ -5,6 +5,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="md" class="day11_16_combine.dao.member.memberDao" />
+
+	<bean id="pd" class="day11_16_combine.dao.porder.porderDao" />
+
+	<bean id="f1" class="day11_16_combine.dao.Fact">
+		<property name="m" ref="md" />
+		<property name="p" ref="pd" />
+	</bean>
 
 	<bean id="m1" class="day11_16_combine.model.member">
 		<property name="name" value="未填入姓名" />
