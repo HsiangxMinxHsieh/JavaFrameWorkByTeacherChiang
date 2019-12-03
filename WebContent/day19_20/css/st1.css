@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body {
+	font-family: arial, "Microsoft JhengHei", "微軟正黑體", sans-serif !important;
+	height: 8.5in;
+}
+
+.header {
+	position: fixed;
+	width: 90%;
+	height: 15%;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: 5%;
+	background-color: #EFFAF1;
+}
+
+.sidebar {
+	position: fixed;
+	width: 15%;
+	height: auto;
+	top: 15%;
+	right: auto;
+	bottom: 100px;
+	left: 5%;
+	background-color: #FFF5EE;
+}
+
+.main {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	text-align: center;
+	position: fixed;
+	width: 75%;
+	height: auto;
+	top: 15%;
+	right: 0;
+	bottom: 100px;
+	left: 20%;
+	background-color: #DBF7EC;
+}
+
+.footer {
+	position: fixed;
+	width: 90%;
+	height: 100px;
+	top: auto;
+	right: 0;
+	bottom: 0;
+	left: 5%;
+	background-color: #1D6246;
+}
