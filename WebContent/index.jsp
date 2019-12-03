@@ -25,7 +25,7 @@ body {
 	//
 	one
 	column
-	on
+	on 
 	mobile
 }
 
@@ -108,68 +108,36 @@ body {
 				<a href="day11_16/day11_16ex1_Spring_example_class.jsp"
 					target=_blank><H4>Spring使用範例(類別)</H4></a> <a
 					href="day11_16/day11_16ex2_Spring_example_index.jsp" target=_blank><H4>Spring使用範例(網頁)</H4></a>
-				
+
 				<a href="day11_16/day11_16ex4.jsp" target=_blank><H4>
 						Dynamic Web Project 轉<BR> Maven Project步驟及注意事項
 					</H4></a><a href="day11_16/day11_16ex5.jsp" target=_blank><H4>新建Maven
-						Project步驟及注意事項</H4></a><a
-					href="day11_16/day11_16ex6.jsp" target=_blank><H4>匯出與匯入自製的JAR檔</H4></a><a
+						Project步驟及注意事項</H4></a><a href="day11_16/day11_16ex6.jsp" target=_blank><H4>匯出與匯入自製的JAR檔</H4></a><a
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_DataBase.jsp"
 					target=_blank><H4>大型購物網站資料庫新增語法</H4></a><a
 					href="day11_16/day11_16ex3_Big_Order_Member_Example_Home.jsp"
-					target=_blank><H4>大型購物網站範例進入點</H4></a><a href="day11_16/day11_16ex7.jsp"
-					target=_blank><H4>Spring-AOP</H4></a><a href="day11_16/day11_16ex8.jsp"
-					target=_blank><H4>Spring-AOP使用範例(類別)</H4></a><a href="day34/day34ex5.jsp"
-					target=_blank><H4>連結標題待修正</H4></a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item__content">
-				<span class="functiontitle">第十七～二十堂課(Css&JavaScript)：</span> <a
-					href="day17_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(CSS美化)</H4></a> <a
-					href="day17_20/day17_20ex2.jsp" target=_blank><H4>JavaScript簡單範例</H4></a> <a
-					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
+					target=_blank><H4>大型購物網站範例進入點</H4></a><a
+					href="day11_16/day11_16ex7.jsp" target=_blank><H4>Spring-AOP</H4></a><a
+					href="day11_16/day11_16ex8.jsp" target=_blank><H4>Spring-AOP使用範例(類別)</H4></a><a
 					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
 			</div>
 		</div>
-		<div class="item">
+		<div class="item"> 
 			<div class="item__content">
-				<span class="functiontitle">第十三十四堂課：</span> <a
-					href="day34/day34ex1.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex2.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
+				<span class="functiontitle">第十七～十八堂課(Css&JavaScript)：</span> <a
+					href="day17_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(CSS美化)</H4></a>
+				<a href="day17_20/day17_20ex2.jsp" target=_blank><H4>JavaScript簡單範例</H4></a>
+				<a href="day17_20/day17_20ex3_jQuery.jsp" target=_blank><H4>JQuery
+						Mobile範例與說明</H4></a> <a href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a>
+				<a href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
 			</div>
 		</div>
 		<div class="item">
 			<div class="item__content">
-				<span class="functiontitle">第十五十六堂課：</span> <a
-					href="day34/day34ex1.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex2.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item__content">
-				<span class="functiontitle">第十七十八堂課：</span> <a
-					href="day34/day34ex1.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex2.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="item__content">
-				<span class="functiontitle">第十九二十堂課：</span> <a
-					href="day34/day34ex1.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex2.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex3.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
+				<span class="functiontitle">第十九～二十堂課(JQuery&VueJS)：</span> <a
+					href="day19_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(JQUERY美化)</H4></a>
+				<a href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
+					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
 					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
 			</div>
 		</div>
