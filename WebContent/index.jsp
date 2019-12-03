@@ -128,17 +128,16 @@ body {
 					href="day17_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(CSS美化)</H4></a>
 				<a href="day17_20/day17_20ex2.jsp" target=_blank><H4>JavaScript簡單範例</H4></a>
 				<a href="day17_20/day17_20ex3_jQuery.jsp" target=_blank><H4>JQuery
-						Mobile範例與說明</H4></a> <a href="day34/day34ex4.jsp" target=_blank><H4>連結標題待修正</H4></a>
-				<a href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
+						Mobile範例與說明</H4></a>
 			</div>
 		</div>
 		<div class="item">
 			<div class="item__content">
 				<span class="functiontitle">第十九～二十堂課(JQuery&VueJS)：</span> <a
-					href="day19_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(JQUERY美化)</H4></a>
-				<a href="day19_20/day19_20ex2.jsp" target=_blank><H4>VueJs範例</H4></a>
-				<a href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a> <a
-					href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
+					href="day19_20/day17_20ex1_index.jsp" target=_blank><H4>大型購物網站進入點(JQuery Mobile美化)</H4></a>
+				<a href="day19_20/day19_20ex2.jsp" target=_blank><H4>Vue
+						Js範例</H4></a> <a href="day19_20/day19_20ex3.jsp" target=_blank><H4>Vue
+						Js範例2</H4></a> <a href="day34/day34ex5.jsp" target=_blank><H4>連結標題待修正</H4></a>
 			</div>
 		</div>
 	</div>

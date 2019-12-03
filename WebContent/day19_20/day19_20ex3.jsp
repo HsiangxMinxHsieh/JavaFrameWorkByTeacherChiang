@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Vue JS使用範例</title>
+<title>Vue JS使用範例2</title>
 <link rel=stylesheet type="text/css" href="../css/class.css">
 <link rel=stylesheet type="text/css" href="./css/style.css">
 
@@ -16,17 +16,16 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="./js/main.js"></script>
 </head>
-<body onload="initial()">
-	<div class="title">Vue JS使用範例</div>
+<body onload="initial2()">
+	<div class="title">Vue JS使用範例2</div>
 	<h1>這是用來測試CSS是否已載入的文字</h1>
-	<HR>
-	<span class="functiontitle">※利用data來直接顯示輸入值：</span>
-	<BR>
-	<p id="msg">{{ message }}</p>
-	<p class="msg2">{{ message2 }}</p>
+	<div id="msg">
+		<p v-html="message"></p>
+		<input type="text" v-model="text1"> <input type="button"
+			v-on:click="doAction" value="click">
+	</div>
 	<HR>
 	<span class="functiontitle">此網頁內容：</span>
-	<BR>
 	<BR>&lt;%@ page language=&quot;java&quot;
 	contentType=&quot;text/html; charset=UTF-8&quot;
 	<BR> pageEncoding=&quot;UTF-8&quot;%&gt;
@@ -34,7 +33,7 @@
 	<BR> &lt;html&gt;
 	<BR> &lt;head&gt;
 	<BR> &lt;meta charset=&quot;UTF-8&quot;&gt;
-	<BR> &lt;title&gt;Vue JS使用範例&lt;/title&gt;
+	<BR> &lt;title&gt;Vue JS使用範例2&lt;/title&gt;
 	<BR> &lt;link rel=stylesheet type=&quot;text/css&quot;
 	href=&quot;../css/class.css&quot;&gt;
 	<font color=red> <BR> &lt;link rel=stylesheet
@@ -51,60 +50,46 @@
 		<BR> &lt;script src=&quot;./js/main.js&quot;&gt;&lt;/script&gt;
 	</font>
 	<BR> &lt;/head&gt;
-	<BR> &lt;body
-	<font color=red> onload=&quot;initial()&quot;</font>&gt;
-	<BR> &lt;div class=&quot;title&quot;&gt;Vue JS使用範例&lt;/div&gt;
-	<BR> &lt;h1&gt;這是用來測試CSS是否已載入的文字&lt;/h1&gt;
-	<BR> &lt;HR&gt;
-	<BR> &lt;span
-	class=&quot;functiontitle&quot;&gt;※利用data來直接顯示輸入值：&lt;/span&gt;
-	<BR> &lt;BR&gt;
-	<font color=red> <BR> &lt;p id=&quot;msg&quot;&gt;{{
-		message }}&lt;/p&gt; <BR> &lt;p class=&quot;msg2&quot;&gt;{{
-		message2 }}&lt;/p&gt;
-	</font>
+	<BR> &lt;body<font color=red> onload=&quot;initial2()&quot;</font>&gt;
+	<BR> &lt;div class=&quot;title&quot;&gt;Vue JS使用範例2&lt;/div&gt;
+	<BR> &lt;h1&gt;這是用來測試CSS是否已載入的文字&lt;/h1&gt;<font color = red>
+	<BR> &lt;div id=&quot;msg&quot;&gt;
+	<BR> &lt;p v-html=&quot;message&quot;&gt;&lt;/p&gt;
+	<BR> &lt;input type=&quot;text&quot; v-model=&quot;text1&quot;&gt;
+	&lt;input type=&quot;button&quot;
+	<BR> v-on:click=&quot;doAction&quot; value=&quot;click&quot;&gt;
+	<BR> &lt;/div&gt;</font>
 	<BR> &lt;HR&gt;
 	<BR> &lt;/body&gt;
 	<BR> &lt;/html&gt;
 	<BR>
-	<HR>
-	<span class="functiontitle">css內容：</span>
-	<BR> @charset &quot;UTF-8&quot;;
-	<BR> body {
-	<BR> color: #999;
-	<BR> padding: 5px 16px;
-	<BR> font-size: 14pt;
-	<BR> line-height: 150%;
-	<BR> }
-	<BR> h1 {
-	<BR> font-size: 24pt;
-	<BR> }
-	<BR> p {
-	<BR> font-size: 18pt;
-	<BR> }
 	<BR>
-	<BR>
-
-
 	<HR>
 	<span class="functiontitle">main.js內容：</span>
-	<BR> function initial() {
+	<BR>
+	<BR> function initial2() {
 	<BR>
 	<BR> new Vue({
-	<BR> el : '#msg',
+	<BR> el : &#x27;#msg&#x27;,
 	<BR> data : {
-	<BR> message : 'this is Vue.js sample!吼黑哈',
+	<BR> message : &#x27;輸入文字以改變此處值。&#x27;,
+	<BR> },
+	<BR> methods : {
+	<BR> doAction : function() {
+	<BR> var str = this.text1;
+	<BR> this.message = &#x27;你輸入了：&lt;font color=&quot;red&quot;
+	size=&quot;10&quot;&gt;&#x27; + str + &#x27;&lt;/font&gt;.&#x27;;
 	<BR> }
-	<BR> })
-	<BR> new Vue({
-	<BR> el : '.msg2',
-	<BR> data : {
-	<BR> message2 : '巨匠電腦!吼黑哈'
 	<BR> }
+	<BR>
 	<BR> })
 	<BR> }
 	<BR>
 	<BR>
+	<BR>
+
+
+
 
 
 </body>
